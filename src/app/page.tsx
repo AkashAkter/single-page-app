@@ -250,36 +250,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="relative bg-gradient-to-r from-indigo-600 to-purple-600 py-16 sm:py-24">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0.6))]"></div>
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Ready to transform your business?
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-indigo-100">
-              Join thousands of businesses using our platform to drive growth
-              and make data-driven decisions.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a
-                href="#"
-                className="rounded-md bg-white px-6 py-3 text-lg font-semibold text-indigo-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors duration-200"
-              >
-                Start Free Trial
-              </a>
-              <a
-                href="#"
-                className="rounded-md px-6 py-3 text-lg font-semibold text-white ring-1 ring-white hover:bg-white/10 transition-all duration-200"
-              >
-                Schedule Demo
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
