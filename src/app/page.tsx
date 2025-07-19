@@ -62,6 +62,36 @@ export default function Home() {
         </div>
       </main>
 
+      {/* Logo Cloud Section */}
+      <section className="py-12 sm:py-16 bg-slate-800/30">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 className="text-center text-sm font-semibold leading-7 text-cyan-400 tracking-wider">
+            TRUSTED BY INDUSTRY LEADERS
+          </h2>
+          <div className="mt-10 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
+            {[
+              { name: "TechNova", logo: "/logos/technova.svg" },
+              { name: "SwiftLaunch", logo: "/logos/swiftlaunch.svg" },
+              { name: "PixelPerfect", logo: "/logos/pixelperfect.svg" },
+              { name: "DataSphere", logo: "/logos/datasphere.svg" },
+              { name: "CloudForge", logo: "/logos/cloudforge.svg" },
+              { name: "InnoVate", logo: "/logos/innovate.svg" },
+            ].map((company) => (
+              <div
+                key={company.name}
+                className="flex justify-center items-center h-16 grayscale hover:grayscale-0 transition-all duration-300"
+              >
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  className="max-h-12 max-w-[120px]"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section
         id="features"
@@ -140,6 +170,66 @@ export default function Home() {
                   </svg>
                 ),
               },
+              {
+                name: "Automated Documentation",
+                description:
+                  "Never waste time writing docs again. Our AI generates comprehensive documentation as you work, keeping everyone aligned.",
+                icon: (
+                  <svg
+                    className="h-8 w-8 text-cyan-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
+                  </svg>
+                ),
+              },
+              {
+                name: "Smart Meeting Summaries",
+                description:
+                  "Automatically capture action items, decisions, and key points from every meeting with 98% accuracy.",
+                icon: (
+                  <svg
+                    className="h-8 w-8 text-cyan-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                ),
+              },
+              {
+                name: "Security & Compliance",
+                description:
+                  "Enterprise-grade security with automated compliance tracking for SOC2, GDPR, and HIPAA requirements.",
+                icon: (
+                  <svg
+                    className="h-8 w-8 text-cyan-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                ),
+              },
             ].map((feature) => (
               <div
                 key={feature.name}
@@ -181,6 +271,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-24 sm:py-32 bg-gradient-to-br from-slate-900 to-cyan-900/30">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Quantifiable Results
+            </h2>
+            <p className="mt-4 text-lg text-slate-300">
+              See the measurable impact QuantumLeap has delivered for teams like
+              yours
+            </p>
+          </div>
+          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { value: "87%", label: "Faster project completion" },
+              { value: "3.5x", label: "More features shipped" },
+              { value: "62%", label: "Reduction in meetings" },
+              { value: "91%", label: "Teams reporting higher satisfaction" },
+            ].map((stat, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center p-6 bg-slate-800/30 rounded-xl backdrop-blur-sm"
+              >
+                <p className="text-5xl font-bold text-cyan-400">{stat.value}</p>
+                <p className="mt-4 text-lg text-slate-300">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -208,19 +329,19 @@ export default function Home() {
                   "The predictive asset generation is unbelievable. It suggests React components and CSS that are about 90% of what we need. The productivity gain is immense.",
                 name: "Maria Garcia",
                 title: "Lead Designer, PixelPerfect",
-                avatar: "https://randomuser.me/api/portraits/women/32.jpg",
+                avatar: "https://randomuser.me/api/portraits/men/46.jpg",
               },
               {
                 quote:
                   "As a startup, resource allocation is critical. QuantumLeap identifies potential roadblocks and helps us pivot before we lose momentum. It's indispensable.",
                 name: "Alex Chen",
                 title: "Founder, SwiftLaunch",
-                avatar: "https://randomuser.me/api/portraits/men/68.jpg",
+                avatar: "https://randomuser.me/api/portraits/men/46.jpg",
               },
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="flex flex-col rounded-2xl bg-slate-800/50 p-8 ring-1 ring-white/10"
+                className="flex flex-col rounded-2xl bg-slate-800/50 p-8 ring-1 ring-white/10 hover:ring-cyan-400/30 transition-all duration-300"
               >
                 <div className="flex-1">
                   <p className="text-lg text-slate-300">
@@ -229,13 +350,14 @@ export default function Home() {
                 </div>
                 <div className="mt-6">
                   <div className="flex items-center">
-                    <Image
-                      src={testimonial.avatar}
-                      width={50}
-                      height={50}
-                      alt={testimonial.name}
-                      className="rounded-full"
-                    />
+                    <div className="relative h-12 w-12 rounded-full overflow-hidden">
+                      <Image
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                    </div>
                     <div className="ml-4">
                       <h3 className="text-lg font-semibold text-white">
                         {testimonial.name}
@@ -246,6 +368,152 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-24 sm:py-32 bg-slate-800/30">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="mt-4 text-lg text-slate-300">
+              Start for free, upgrade as you grow. No hidden fees.
+            </p>
+          </div>
+          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                name: "Starter",
+                price: "$29",
+                period: "per user/month",
+                description: "Perfect for small teams getting started",
+                features: [
+                  "Up to 5 team members",
+                  "Basic task automation",
+                  "3 project templates",
+                  "Email support",
+                ],
+                cta: "Get Started",
+              },
+              {
+                name: "Professional",
+                price: "$79",
+                period: "per user/month",
+                description: "For growing teams with advanced needs",
+                features: [
+                  "Up to 20 team members",
+                  "Advanced automation",
+                  "Unlimited templates",
+                  "Priority support",
+                  "API access",
+                ],
+                cta: "Most Popular",
+                featured: true,
+              },
+              {
+                name: "Enterprise",
+                price: "Custom",
+                period: "",
+                description: "For organizations with complex workflows",
+                features: [
+                  "Unlimited team members",
+                  "All Professional features",
+                  "Dedicated account manager",
+                  "Custom integrations",
+                  "SLA guarantees",
+                  "On-premise options",
+                ],
+                cta: "Contact Sales",
+              },
+            ].map((plan, index) => (
+              <div
+                key={index}
+                className={`flex flex-col rounded-2xl p-8 ring-1 ${
+                  plan.featured
+                    ? "bg-gradient-to-br from-cyan-600/20 to-teal-600/20 ring-cyan-400/50"
+                    : "bg-slate-800/50 ring-white/10"
+                }`}
+              >
+                <h3 className="text-xl font-semibold text-white">
+                  {plan.name}
+                </h3>
+                <div className="mt-4 flex items-baseline">
+                  <span className="text-5xl font-bold text-white">
+                    {plan.price}
+                  </span>
+                  {plan.period && (
+                    <span className="ml-2 text-lg text-slate-300">
+                      {plan.period}
+                    </span>
+                  )}
+                </div>
+                <p className="mt-4 text-slate-300">{plan.description}</p>
+                <ul className="mt-8 space-y-3 flex-1">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-center">
+                      <svg
+                        className="h-5 w-5 text-cyan-400"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span className="ml-3 text-slate-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="#"
+                  className={`mt-8 w-full rounded-md px-6 py-3 text-center text-lg font-semibold ${
+                    plan.featured
+                      ? "bg-cyan-600 text-white hover:bg-cyan-500"
+                      : "bg-slate-700 text-white hover:bg-slate-600"
+                  } transition-colors duration-300`}
+                >
+                  {plan.cta}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative py-24 sm:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/30 to-teal-900/30 -z-10" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0.1))] -z-10" />
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Ready to transform your workflow?
+            </h2>
+            <p className="mt-6 text-lg text-slate-300">
+              Join thousands of teams who have accelerated their productivity
+              with QuantumLeap.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
+              <a
+                href="#"
+                className="rounded-md bg-cyan-600 px-6 py-3 text-lg font-semibold text-white shadow-lg hover:bg-cyan-500 transition-colors duration-300"
+              >
+                Start Free Trial
+              </a>
+              <a
+                href="#"
+                className="rounded-md px-6 py-3 text-lg font-semibold text-white ring-1 ring-white/10 hover:ring-white/30 transition-all duration-300"
+              >
+                Book a Demo
+              </a>
+            </div>
           </div>
         </div>
       </section>
