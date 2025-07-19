@@ -3,7 +3,7 @@ import Image from "next/image";
 /* eslint-disable react/no-unescaped-entities */
 export default function Home() {
   return (
-    <div className="bg-gray-900">
+    <div className="bg-slate-900 text-white">
       {/* Hero Section */}
       <main className="relative isolate min-h-screen">
         {/* Background blobs */}
@@ -12,7 +12,7 @@ export default function Home() {
           aria-hidden="true"
         >
           <div
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-indigo-500 to-purple-600 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-cyan-400 to-teal-600 opacity-25 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
             style={{
               clipPath:
                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
@@ -23,25 +23,26 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Transform Your Business with{" "}
-              <span className="text-indigo-400">Data Insights</span>
+              Automate Your Workflow with{" "}
+              <span className="text-cyan-400">QuantumLeap AI</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300 max-w-3xl mx-auto">
-              Harness the power of advanced analytics to make smarter decisions,
-              optimize operations, and drive growth for your online business.
+            <p className="mt-6 text-lg leading-8 text-slate-300 max-w-3xl mx-auto">
+              Unleash your team's creative potential. Our AI-driven platform
+              automates repetitive tasks, streamlines project management, and
+              delivers intelligent insights to keep you ahead.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
               <a
                 href="#"
-                className="rounded-md bg-indigo-600 px-6 py-3 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors duration-200"
+                className="rounded-md bg-cyan-600 px-6 py-3 text-lg font-semibold text-white shadow-lg hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 transition-colors duration-300"
               >
-                Get Started - It's Free
+                Start Your 14-Day Free Trial
               </a>
               <a
                 href="#features"
-                className="rounded-md px-6 py-3 text-lg font-semibold text-white ring-1 ring-white/20 hover:ring-white/40 transition-all duration-200"
+                className="rounded-md px-6 py-3 text-lg font-semibold text-white ring-1 ring-white/10 hover:ring-white/30 transition-all duration-300"
               >
-                Explore Features
+                Explore the Platform
               </a>
             </div>
           </div>
@@ -52,7 +53,7 @@ export default function Home() {
           aria-hidden="true"
         >
           <div
-            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-indigo-500 to-purple-600 opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-sky-500 to-teal-500 opacity-25 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
             style={{
               clipPath:
                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
@@ -62,26 +63,30 @@ export default function Home() {
       </main>
 
       {/* Features Section */}
-      <section id="features" className="py-24 sm:py-32 bg-gray-800/50">
+      <section
+        id="features"
+        className="py-24 sm:py-32 bg-slate-900/70 backdrop-blur-sm"
+      >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Powerful Features
+              A Smarter Way to Work
             </h2>
-            <p className="mt-4 text-lg text-gray-300">
-              Everything you need to understand and grow your business
+            <p className="mt-4 text-lg text-slate-300">
+              QuantumLeap provides the tools to build, manage, and scale your
+              projects effortlessly.
             </p>
           </div>
 
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                name: "Real-time Analytics",
+                name: "Intelligent Task Delegation",
                 description:
-                  "Get up-to-the-minute insights into your business performance with our powerful analytics dashboard.",
+                  "Our AI analyzes project requirements and team strengths to assign tasks automatically, optimizing for speed and quality.",
                 icon: (
                   <svg
-                    className="h-8 w-8 text-indigo-400"
+                    className="h-8 w-8 text-cyan-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -90,18 +95,18 @@ export default function Home() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                     />
                   </svg>
                 ),
               },
               {
-                name: "AI Predictions",
+                name: "Predictive Asset Generation",
                 description:
-                  "Our machine learning models forecast trends and help you stay ahead of the competition.",
+                  "From code snippets to design mockups, our generative AI suggests assets and components, drastically cutting down development time.",
                 icon: (
                   <svg
-                    className="h-8 w-8 text-indigo-400"
+                    className="h-8 w-8 text-cyan-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -110,18 +115,18 @@ export default function Home() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                      d="M9.75 3.104l7.5 12-7.5 12-7.5-12 7.5-12zM9.75 3.104V15.104M9.75 3.104L2.25 15.104M17.25 21.104l-7.5-12 7.5-12 7.5 12-7.5 12zM17.25 21.104V9.104M17.25 21.104l7.5-12"
                     />
                   </svg>
                 ),
               },
               {
-                name: "Custom Reports",
+                name: "Dynamic Resource Allocation",
                 description:
-                  "Create tailored reports that focus on the metrics that matter most to your business.",
+                  "Monitor project progress and reallocate resources in real-time. Our system anticipates bottlenecks before they happen.",
                 icon: (
                   <svg
-                    className="h-8 w-8 text-indigo-400"
+                    className="h-8 w-8 text-cyan-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -130,7 +135,7 @@ export default function Home() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      d="M10.5 6a7.5 7.5 0 100 12 7.5 7.5 0 000-12zM10.5 18V15m0 0a2.5 2.5 0 115 0 2.5 2.5 0 01-5 0zm0 0V6m0 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0z"
                     />
                   </svg>
                 ),
@@ -138,22 +143,22 @@ export default function Home() {
             ].map((feature) => (
               <div
                 key={feature.name}
-                className="flex flex-col rounded-2xl bg-gray-800/50 p-8 hover:bg-gray-800/70 transition-colors duration-200"
+                className="flex flex-col rounded-2xl bg-slate-800/50 p-8 ring-1 ring-white/10 hover:ring-cyan-400/50 transition-all duration-300"
               >
                 <div className="flex items-center">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gray-700">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-700 ring-1 ring-white/10">
                     {feature.icon}
                   </div>
                   <h3 className="ml-4 text-xl font-semibold text-white">
                     {feature.name}
                   </h3>
                 </div>
-                <p className="mt-4 flex-1 text-gray-300">
+                <p className="mt-4 flex-1 text-slate-300">
                   {feature.description}
                 </p>
                 <a
                   href="#"
-                  className="mt-6 inline-flex items-center text-indigo-400 hover:text-indigo-300"
+                  className="mt-6 inline-flex items-center font-semibold text-cyan-400 hover:text-cyan-300"
                 >
                   Learn more
                   <svg
@@ -181,11 +186,11 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Trusted by Businesses Worldwide
+              Trusted by High-Velocity Teams
             </h2>
-            <p className="mt-4 text-lg text-gray-300">
-              Join thousands of companies transforming their operations with our
-              platform
+            <p className="mt-4 text-lg text-slate-300">
+              See how innovative companies are leveraging QuantumLeap to build
+              faster and smarter.
             </p>
           </div>
 
@@ -193,57 +198,51 @@ export default function Home() {
             {[
               {
                 quote:
-                  "This platform revolutionized how we analyze customer behavior. Our conversion rates improved by 40% in just three months.",
-                name: "Sarah Johnson",
-                title: "CEO, TechSolutions",
-                avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+                  "QuantumLeap's AI task delegation cut our project kickoff time in half. It's like having a world-class project manager built into our workflow.",
+                name: "David Lee",
+                title: "CTO, Innovatech",
+                avatar: "https://randomuser.me/api/portraits/men/46.jpg",
               },
               {
                 quote:
-                  "The predictive analytics saved us thousands in potential losses by identifying market trends before our competitors.",
-                name: "Michael Chen",
-                title: "Marketing Director, BrandUp",
-                avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+                  "The predictive asset generation is unbelievable. It suggests React components and CSS that are about 90% of what we need. The productivity gain is immense.",
+                name: "Maria Garcia",
+                title: "Lead Designer, PixelPerfect",
+                avatar: "https://randomuser.me/api/portraits/women/32.jpg",
               },
               {
                 quote:
-                  "Implementation was seamless and the support team is exceptional. We've scaled our operations efficiently thanks to their insights.",
-                name: "Emma Rodriguez",
-                title: "COO, GrowthHive",
-                avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+                  "As a startup, resource allocation is critical. QuantumLeap identifies potential roadblocks and helps us pivot before we lose momentum. It's indispensable.",
+                name: "Alex Chen",
+                title: "Founder, SwiftLaunch",
+                avatar: "https://randomuser.me/api/portraits/men/68.jpg",
               },
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="rounded-2xl bg-gray-800/50 p-8 hover:bg-gray-800/70 transition-colors duration-200"
+                className="flex flex-col rounded-2xl bg-slate-800/50 p-8 ring-1 ring-white/10"
               >
-                <div className="flex items-center">
-                  <Image
-                    src={testimonial.avatar}
-                    width={60}
-                    height={60}
-                    alt={testimonial.name}
-                    className="rounded-full"
-                  />
-                  <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-white">
-                      {testimonial.name}
-                    </h3>
-                    <p className="text-gray-400">{testimonial.title}</p>
-                  </div>
+                <div className="flex-1">
+                  <p className="text-lg text-slate-300">
+                    "{testimonial.quote}"
+                  </p>
                 </div>
-                <p className="mt-6 text-gray-300">"{testimonial.quote}"</p>
-                <div className="mt-6 flex items-center">
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className="h-5 w-5 text-yellow-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+                <div className="mt-6">
+                  <div className="flex items-center">
+                    <Image
+                      src={testimonial.avatar}
+                      width={50}
+                      height={50}
+                      alt={testimonial.name}
+                      className="rounded-full"
+                    />
+                    <div className="ml-4">
+                      <h3 className="text-lg font-semibold text-white">
+                        {testimonial.name}
+                      </h3>
+                      <p className="text-slate-400">{testimonial.title}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
