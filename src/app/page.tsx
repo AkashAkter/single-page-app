@@ -2,6 +2,16 @@ import Image from "next/image";
 
 /* eslint-disable react/no-unescaped-entities */
 export default function Home() {
+  // Array of logos with direct URLs
+  const logos = [
+    { name: "Vercel", url: "https://cdn.simpleicons.org/vercel/white" },
+    { name: "Sentry", url: "https://cdn.simpleicons.org/sentry/white" },
+    { name: "GitHub", url: "https://cdn.simpleicons.org/github/white" },
+    { name: "Docker", url: "https://cdn.simpleicons.org/docker/white" },
+    { name: "Netlify", url: "https://cdn.simpleicons.org/netlify/white" },
+    { name: "Stripe", url: "https://cdn.simpleicons.org/stripe/white" },
+  ];
+
   return (
     <div className="bg-slate-900 text-white">
       {/* Hero Section */}
@@ -69,22 +79,18 @@ export default function Home() {
             TRUSTED BY INDUSTRY LEADERS
           </h2>
           <div className="mt-10 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
-            {[
-              { name: "TechNova", logo: "/logos/technova.svg" },
-              { name: "SwiftLaunch", logo: "/logos/swiftlaunch.svg" },
-              { name: "PixelPerfect", logo: "/logos/pixelperfect.svg" },
-              { name: "DataSphere", logo: "/logos/datasphere.svg" },
-              { name: "CloudForge", logo: "/logos/cloudforge.svg" },
-              { name: "InnoVate", logo: "/logos/innovate.svg" },
-            ].map((company) => (
+            {logos.map((company) => (
               <div
                 key={company.name}
                 className="flex justify-center items-center h-16 grayscale hover:grayscale-0 transition-all duration-300"
               >
-                <img
-                  src={company.logo}
-                  alt={company.name}
-                  className="max-h-12 max-w-[120px]"
+                <Image
+                  src={company.url}
+                  alt={`${company.name} logo`}
+                  width={60}
+                  height={60}
+                  className="object-contain"
+                  unoptimized // Recommended for SVGs to prevent quality loss
                 />
               </div>
             ))}
