@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 const HeroSection = () => {
   return (
     <main className="relative isolate min-h-screen flex items-center overflow-hidden bg-slate-900">

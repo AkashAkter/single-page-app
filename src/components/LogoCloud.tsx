@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import { JSX, SVGProps } from "react";
 
-const LogoCloud = () => {
+const LogoSection = () => {
   // --- SVG Icon Components ---
   const VercelIcon = (
     props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -118,36 +119,67 @@ const LogoCloud = () => {
   ];
 
   return (
-    <section className="bg-slate-900 py-24 sm:py-32">
+    <section className="relative isolate overflow-hidden bg-slate-900 py-24 sm:py-32">
+      {/* Background Aurora */}
+      <div
+        className="absolute inset-x-0 top-0 -z-10 transform-gpu overflow-hidden blur-3xl"
+        aria-hidden="true"
+      >
+        <div
+          className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
+        />
+      </div>
+
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-base font-semibold leading-7 text-violet-400">
-            Seamless Integrations
+            Trusted by industry leaders
           </p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Connect Your Entire Stack
+            Powering the future of work
           </h2>
           <p className="mt-6 text-lg leading-8 text-slate-300">
-            QuantumLeap AI plugs directly into the ecosystem you already use.
-            From version control and CI/CD to communication and design, our
-            platform acts as the central hub for your projects.
+            QuantumLeap AI is trusted by innovative teams at the world's most
+            forward-thinking companies.
           </p>
         </div>
+
         <div className="mt-16">
-          <div className="grid grid-cols-2 place-items-center gap-x-8 gap-y-12 sm:grid-cols-4 lg:grid-cols-7">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-4 lg:grid-cols-7">
             {logos.map(({ name, Icon }) => (
-              <div key={name}>
+              <div
+                key={name}
+                className="group relative flex justify-center rounded-xl bg-slate-800/50 p-4 backdrop-blur-sm transition-all duration-300 hover:bg-slate-800/80 hover:shadow-lg hover:ring-1 hover:ring-slate-400/10"
+              >
                 <Icon
                   aria-label={`${name} logo`}
-                  className="h-12 w-auto text-slate-500 transition-all duration-300 hover:text-white hover:scale-110"
+                  className="h-12 w-auto text-slate-300 transition-all duration-300 group-hover:text-white group-hover:scale-110"
                 />
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* Bottom Background Aurora */}
+      <div
+        className="absolute inset-x-0 bottom-0 -z-10 transform-gpu overflow-hidden blur-3xl"
+        aria-hidden="true"
+      >
+        <div
+          className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
+        />
+      </div>
     </section>
   );
 };
 
-export default LogoCloud;
+export default LogoSection;
