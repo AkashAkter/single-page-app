@@ -1,6 +1,7 @@
 import { JSX, SVGProps } from "react";
 
 const LogoCloud = () => {
+  // --- SVG Icon Components ---
   const VercelIcon = (
     props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
   ) => (
@@ -46,6 +47,36 @@ const LogoCloud = () => {
     </svg>
   );
 
+  const SlackIcon = (
+    props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+  ) => (
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      {...props}
+    >
+      <title>Slack</title>
+      <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.522h2.522a2.527 2.527 0 0 1 0 5.042H8.834a2.527 2.527 0 0 1-2.52-2.52zm2.521-3.793a2.527 2.527 0 0 1 2.521-2.52h-2.52v2.52zm0 6.314a2.527 2.527 0 0 1 0-5.042V15.16a2.527 2.527 0 0 1 2.521 2.522v2.522a2.527 2.527 0 0 1-2.521-2.521zm3.784-2.521a2.528 2.528 0 0 1 2.521-2.521A2.528 2.528 0 0 1 17.66 12.64a2.527 2.527 0 0 1-2.522 2.524h-2.52v-2.523zm-1.26-3.784a2.527 2.527 0 0 1-2.522-2.522V3.784a2.527 2.527 0 0 1 5.042 0v2.52h-2.52zM18.916 8.87a2.528 2.528 0 0 1 2.523-2.523A2.528 2.528 0 0 1 24 8.87a2.528 2.528 0 0 1-2.523 2.521h-2.52v-2.52zM17.645 8.87a2.528 2.528 0 0 1-2.523 2.523v2.521a2.528 2.528 0 0 1 5.043 0v-2.52a2.528 2.528 0 0 1-2.52-2.524z" />
+    </svg>
+  );
+
+  const FigmaIcon = (
+    props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+  ) => (
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      {...props}
+    >
+      <title>Figma</title>
+      <path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zM7.5 12c0-2.485 2.015-4.5 4.5-4.5s4.5 2.015 4.5 4.5v4.5c0 2.485-2.015 4.5-4.5 4.5S7.5 18.985 7.5 16.5V12zm4.5-3a1.5 1.5 0 0 0 0 3a1.5 1.5 0 0 0 0-3zM7.5 7.5c0-2.485 2.015-4.5 4.5-4.5V3c-2.485 0-4.5 2.015-4.5 4.5h-3C4.5 5.015 6.515 3 9 3v4.5H7.5zm4.5 13.5c2.485 0 4.5-2.015 4.5-4.5h3c0 2.485-2.015 4.5-4.5 4.5v-3c2.485 0 4.5-2.015 4.5-4.5H12v4.5z" />
+    </svg>
+  );
+
   const DockerIcon = (
     props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
   ) => (
@@ -76,45 +107,43 @@ const LogoCloud = () => {
     </svg>
   );
 
-  const StripeIcon = (
-    props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-  ) => (
-    <svg
-      role="img"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="currentColor"
-      {...props}
-    >
-      <title>Stripe</title>
-      <path d="M21.12 12.42c0-2.31-1.38-3.03-3.06-3.57-1.14-.39-1.38-.72-1.38-1.08 0-.54.6-.9 1.5-.9.96 0 1.92.3 2.52.54l.42-2.58c-.84-.3-2.04-.54-3.3-.54-2.52 0-4.26 1.38-4.26 3.42 0 2.22 1.38 2.94 3.06 3.51 1.26.42 1.44.78 1.44 1.14 0-.6-.66-1.02-1.62-1.02-.9 0-2.1.3-2.82.6l-.42-2.64c.9-.36 2.16-.6 3.48-.6 2.46 0 4.2 1.32 4.2 3.42zM24 4.14h-3.48V2.4H17.4v1.74h-2.88v2.4H17.4V11.1c0 2.04 1.02 3.12 3.18 3.12.6 0 1.14-.06 1.62-.24v-2.28c-.42.12-1.02.24-1.5.24-.9 0-1.26-.42-1.26-1.32V6.54H24V4.14zM10.92 2.4H4.08L2.4 13.02 5.82 2.4h3.72l1.98 12.48L10.92 2.4zM0 2.4v19.2h2.82V2.4H0z" />
-    </svg>
-  );
-
   const logos = [
-    { name: "Vercel", Icon: VercelIcon },
-    { name: "Sentry", Icon: SentryIcon },
     { name: "GitHub", Icon: GithubIcon },
+    { name: "Vercel", Icon: VercelIcon },
     { name: "Docker", Icon: DockerIcon },
+    { name: "Figma", Icon: FigmaIcon },
+    { name: "Slack", Icon: SlackIcon },
+    { name: "Sentry", Icon: SentryIcon },
     { name: "Netlify", Icon: NetlifyIcon },
-    { name: "Stripe", Icon: StripeIcon },
   ];
 
   return (
-    <section className="py-12 sm:py-16 bg-slate-800/30">
+    <section className="bg-slate-900 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-sm font-semibold leading-7 text-cyan-400 tracking-wider">
-          TRUSTED BY INDUSTRY LEADERS
-        </h2>
-        <div className="mt-10 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
-          {logos.map(({ name, Icon }) => (
-            <div key={name} className="flex justify-center items-center">
-              <Icon
-                aria-label={`${name} logo`}
-                className="h-8 w-auto text-slate-400 transition-colors duration-300 hover:text-cyan-400"
-              />
-            </div>
-          ))}
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-base font-semibold leading-7 text-violet-400">
+            Seamless Integrations
+          </p>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Connect Your Entire Stack
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-slate-300">
+            QuantumLeap AI plugs directly into the ecosystem you already use.
+            From version control and CI/CD to communication and design, our
+            platform acts as the central hub for your projects.
+          </p>
+        </div>
+        <div className="mt-16">
+          <div className="grid grid-cols-2 place-items-center gap-x-8 gap-y-12 sm:grid-cols-4 lg:grid-cols-7">
+            {logos.map(({ name, Icon }) => (
+              <div key={name}>
+                <Icon
+                  aria-label={`${name} logo`}
+                  className="h-12 w-auto text-slate-500 transition-all duration-300 hover:text-white hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
