@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 const Stats = () => {
-  // const stats = [
-  //   { value: "92%", label: "Faster Project Completion" },
-  //   { value: "3.5x", label: "Increase in Features Shipped" },
-  //   { value: "65%", label: "Reduction in Repetitive Tasks" },
-  //   { value: "98%", label: "Team Satisfaction Score" },
-  // ];
+  const stats = [
+    { value: "92%", label: "Faster Project Completion" },
+    { value: "3.5x", label: "Increase in Features Shipped" },
+    { value: "65%", label: "Reduction in Repetitive Tasks" },
+    { value: "98%", label: "Team Satisfaction Score" },
+  ];
 
   return (
     <section className="bg-gradient-to-b from-slate-900 to-violet-950/25 py-24 sm:py-32">
