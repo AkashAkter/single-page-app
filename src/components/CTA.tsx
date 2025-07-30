@@ -8,9 +8,8 @@ const CTA = () => {
             Unlock Your Team's True Potential
           </h2>
           <p className="mt-6 text-lg leading-8 text-slate-300">
-            See for yourself how QuantumLeap AI can eliminate bottlenecks,
-            automate workflows, and give your team the freedom to focus on what
-            truly matters.
+            See for yourself how QuantumLeap AI can eliminate bottlenecks, and
+            give your team the freedom to focus on what truly matters.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
