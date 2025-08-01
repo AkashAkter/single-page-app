@@ -4,7 +4,6 @@ const Features = () => {
       id="features"
       className="relative isolate overflow-hidden bg-slate-900 py-24 sm:py-32"
     >
-      {/* Background Aurora */}
       <div
         className="absolute inset-x-0 top-0 -z-10 transform-gpu overflow-hidden blur-3xl"
         aria-hidden="true"
@@ -194,7 +193,6 @@ const Features = () => {
         </div>
       </div>
 
-      {/* Bottom Background Aurora */}
       <div
         className="absolute inset-x-0 bottom-0 -z-10 transform-gpu overflow-hidden blur-3xl"
         aria-hidden="true"
