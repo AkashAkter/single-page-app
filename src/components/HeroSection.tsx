@@ -1,7 +1,6 @@
 const HeroSection = () => {
   return (
     <main className="relative isolate min-h-screen flex items-center overflow-hidden bg-slate-900">
-      {/* Background Aurora */}
       <div
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         aria-hidden="true"
@@ -93,7 +92,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Bottom Background Aurora */}
       <div
         className="absolute inset-x-0 bottom-0 -z-10 transform-gpu overflow-hidden blur-3xl"
         aria-hidden="true"
