@@ -7,8 +7,6 @@ import Stats from "@/components/Stats";
 import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
-  // Array of logos with direct URLs
-
   return (
     <div className="bg-slate-900 text-white">
       {/* Hero Section */}
@@ -19,6 +17,7 @@ export default function Home() {
 
       {/* Features Section */}
       <Features />
+
       {/* Stats Section */}
       <Stats />
 
