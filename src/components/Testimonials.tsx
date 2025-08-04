@@ -37,7 +37,7 @@ const Testimonials = () => {
             {
               quote:
                 "QuantumLeap's AI task delegation cut our project kickoff time in half. It's like having a world-class project manager built into our workflow.",
-              name: "David",
+              name: "David Lee",
               title: "CTO, Innovatech",
               avatar: "https://randomuser.me/api/portraits/men/46.jpg",
             },
