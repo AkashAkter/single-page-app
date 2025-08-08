@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 const CTA = () => {
   return (
     <section className="relative isolate overflow-hidden bg-slate-900 py-24 sm:py-32">
