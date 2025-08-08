@@ -1,10 +1,11 @@
+/* eslint-disable react/no-unescaped-entities */
 const CTA = () => {
   return (
     <section className="relative isolate overflow-hidden bg-slate-900 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Unlock Your Potential
+            Unlock Your Team's True Potential
           </h2>
           <p className="mt-6 text-lg leading-8 text-slate-300">
             See for yourself how QuantumLeap AI can eliminate bottlenecks,
